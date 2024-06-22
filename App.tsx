@@ -9,6 +9,9 @@ import ReactNativeList from './component/ReactNativeList';
 import ListMapFunc from './component/ListMapFunc';
 import GridView from './component/GridView';
 import SelectionListView from './component/SelectionList';
+import ClassComponent from './component/ClassComponent';
+import Responsive from './component/Responsive';
+import StyleButton from './component/StyleButton';
 
 function App(): React.JSX.Element {
   const hello=()=>{
@@ -24,7 +27,10 @@ function App(): React.JSX.Element {
       {/* <ReactNativeList/> */}
       {/* <ListMapFunc/> */}
       {/* <GridView/> */}
-      <SelectionListView />
+      {/* <SelectionListView /> */}
+      {/* <ClassComponent/> */}
+      {/* <Responsive/> */}
+      <StyleButton/>
     </View>
   );
 }
