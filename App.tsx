@@ -13,6 +13,7 @@ import ClassComponent from './component/ClassComponent';
 import Responsive from './component/Responsive';
 import StyleButton from './component/StyleButton';
 import RadioButton from './component/RadioButton';
+import DynamicRadio from './component/DynamicRadio';
 
 function App(): React.JSX.Element {
   const hello=()=>{
@@ -32,7 +33,8 @@ function App(): React.JSX.Element {
       {/* <ClassComponent/> */}
       {/* <Responsive/> */}
       {/* <StyleButton/> */}
-      <RadioButton/>
+      {/* <RadioButton/> */}
+      <DynamicRadio/>
     </View>
   );
 }
