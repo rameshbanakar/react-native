@@ -12,6 +12,7 @@ import SelectionListView from './component/SelectionList';
 import ClassComponent from './component/ClassComponent';
 import Responsive from './component/Responsive';
 import StyleButton from './component/StyleButton';
+import RadioButton from './component/RadioButton';
 
 function App(): React.JSX.Element {
   const hello=()=>{
@@ -30,7 +31,8 @@ function App(): React.JSX.Element {
       {/* <SelectionListView /> */}
       {/* <ClassComponent/> */}
       {/* <Responsive/> */}
-      <StyleButton/>
+      {/* <StyleButton/> */}
+      <RadioButton/>
     </View>
   );
 }
