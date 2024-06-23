@@ -19,6 +19,7 @@ import Modal from './component/Modal';
 import Pressable from './component/Pressable';
 import StatusBars from './component/StatusBar';
 import OsCheck from './component/OsCheck';
+import MyWebComponent from './component/WebView';
 function App(): React.JSX.Element {
   const hello=()=>{
     console.warn("button pressed")
@@ -43,7 +44,8 @@ function App(): React.JSX.Element {
       {/* <Modal/> */}
       {/* <Pressable/> */}
       {/* <StatusBars /> */}
-      <OsCheck/>
+      {/* <OsCheck/> */}
+      <MyWebComponent />
     </View>
   );
 }
