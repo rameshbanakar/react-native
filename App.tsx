@@ -18,6 +18,7 @@ import Loader from './component/Loader';
 import Modal from './component/Modal';
 import Pressable from './component/Pressable';
 import StatusBars from './component/StatusBar';
+import OsCheck from './component/OsCheck';
 function App(): React.JSX.Element {
   const hello=()=>{
     console.warn("button pressed")
@@ -41,7 +42,8 @@ function App(): React.JSX.Element {
       {/* <Loader/> */}
       {/* <Modal/> */}
       {/* <Pressable/> */}
-      <StatusBars />
+      {/* <StatusBars /> */}
+      <OsCheck/>
     </View>
   );
 }
