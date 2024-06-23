@@ -15,6 +15,7 @@ import StyleButton from './component/StyleButton';
 import RadioButton from './component/RadioButton';
 import DynamicRadio from './component/DynamicRadio';
 import Loader from './component/Loader';
+import Modal from './component/Modal';
 
 function App(): React.JSX.Element {
   const hello=()=>{
@@ -36,7 +37,8 @@ function App(): React.JSX.Element {
       {/* <StyleButton/> */}
       {/* <RadioButton/> */}
       {/* <DynamicRadio/> */}
-      <Loader/>
+      {/* <Loader/> */}
+      <Modal/>
     </View>
   );
 }
