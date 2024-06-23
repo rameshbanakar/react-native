@@ -14,6 +14,7 @@ import Responsive from './component/Responsive';
 import StyleButton from './component/StyleButton';
 import RadioButton from './component/RadioButton';
 import DynamicRadio from './component/DynamicRadio';
+import Loader from './component/Loader';
 
 function App(): React.JSX.Element {
   const hello=()=>{
@@ -34,7 +35,8 @@ function App(): React.JSX.Element {
       {/* <Responsive/> */}
       {/* <StyleButton/> */}
       {/* <RadioButton/> */}
-      <DynamicRadio/>
+      {/* <DynamicRadio/> */}
+      <Loader/>
     </View>
   );
 }
