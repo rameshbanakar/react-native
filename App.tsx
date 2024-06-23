@@ -1,7 +1,7 @@
 
 
 // import React from 'react';
-import { View, Text, Button, StyleSheet } from 'react-native';
+import { View, Text, Button, StyleSheet, StatusBar } from 'react-native';
 import CompanyData from './component/CompanyData';
 import Input from './component/Input';
 import ReactForm from './component/ReactForm';
@@ -16,7 +16,8 @@ import RadioButton from './component/RadioButton';
 import DynamicRadio from './component/DynamicRadio';
 import Loader from './component/Loader';
 import Modal from './component/Modal';
-
+import Pressable from './component/Pressable';
+import StatusBars from './component/StatusBar';
 function App(): React.JSX.Element {
   const hello=()=>{
     console.warn("button pressed")
@@ -38,7 +39,9 @@ function App(): React.JSX.Element {
       {/* <RadioButton/> */}
       {/* <DynamicRadio/> */}
       {/* <Loader/> */}
-      <Modal/>
+      {/* <Modal/> */}
+      {/* <Pressable/> */}
+      <StatusBars />
     </View>
   );
 }
