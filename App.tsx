@@ -21,42 +21,75 @@ import StatusBars from './component/StatusBar';
 import OsCheck from './component/OsCheck';
 import MyWebComponent from './component/WebView';
 import CustomModal from './component/CustomModal';
-function App(): React.JSX.Element {
-  const hello=()=>{
-    console.warn("button pressed")
-  }
+import StackNav from './component/StackNav';
+
+
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from "@react-navigation/native-stack"
+const Stack = createNativeStackNavigator()
+
+
+const Home = (props:any) => {
   return (
     <View>
-      {/* <CompanyData />
-      <Text style={style.someStyle}>hello world</Text>
-      <Button title='press here' onPress={hello}></Button>
-      <Input /> */}
-      {/* <ReactForm/> */}
-      {/* <ReactNativeList/> */}
-      {/* <ListMapFunc/> */}
-      {/* <GridView/> */}
-      {/* <SelectionListView /> */}
-      {/* <ClassComponent/> */}
-      {/* <Responsive/> */}
-      {/* <StyleButton/> */}
-      {/* <RadioButton/> */}
-      {/* <DynamicRadio/> */}
-      {/* <Loader/> */}
-      {/* <Modal/> */}
-      {/* <Pressable/> */}
-      {/* <StatusBars /> */}
-      {/* <OsCheck/> */}
-       {/* <MyWebComponent /> */}
-       <CustomModal/>
+      <Text >Home screen</Text>
+      <Button title='Go to Login page' onPress={() => props.navigation.navigate("Login")} />
     </View>
   );
+};
+
+const LogIn = (props:any) => {
+  return (
+    <View>
+      <Text >Login screen</Text>
+      <Button title='Go to Login page' onPress={() => props.navigation.navigate("Home")} />
+    </View>
+  );
+};
+
+function App(): React.JSX.Element {
+  
+  return (
+   
+      <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen name="Home" component={Home} />
+        <Stack.Screen name="Login" component={LogIn} />
+        </Stack.Navigator>
+      </NavigationContainer>
+    
+  );
 }
-const style=StyleSheet.create({
-  someStyle:{
-    fontSize:30
+const style = StyleSheet.create({
+  someStyle: {
+    fontSize: 30
   }
 })
 
 
 
 export default App;
+
+
+
+// {/* <CompanyData />
+//       <Text style={style.someStyle}>hello world</Text>
+//       <Button title='press here' onPress={hello}></Button>
+//       <Input /> */}
+// {/* <ReactForm/> */ }
+// {/* <ReactNativeList/> */ }
+// {/* <ListMapFunc/> */ }
+// {/* <GridView/> */ }
+// {/* <SelectionListView /> */ }
+// {/* <ClassComponent/> */ }
+// {/* <Responsive/> */ }
+// {/* <StyleButton/> */ }
+// {/* <RadioButton/> */ }
+// {/* <DynamicRadio/> */ }
+// {/* <Loader/> */ }
+// {/* <Modal/> */ }
+// {/* <Pressable/> */ }
+// {/* <StatusBars /> */ }
+// {/* <OsCheck/> */ }
+// {/* <MyWebComponent /> */ }
+// {/* <CustomModal/> */ }
