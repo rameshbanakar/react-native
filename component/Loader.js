@@ -1,9 +1,12 @@
 import React from 'react'
 import {View, Text, StyleSheet, ActivityIndicator} from 'react-native';
-function Loader() {
+function Loader(props) {
+  const {name,age}=props.route.params
   return (
     <View>
-     <ActivityIndicator size={100} color="blue"/>
+      <Text>Name:{name}</Text>
+      <Text>Age:{age}</Text>
+      <ActivityIndicator size={100} color="blue" />
     </View>
   );
 }

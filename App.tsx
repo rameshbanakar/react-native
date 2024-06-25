@@ -29,35 +29,45 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack"
 const Stack = createNativeStackNavigator()
 
 
-const Home = (props:any) => {
+const Home = (props: any) => {
   return (
     <View>
       <Text >Home screen</Text>
-      <Button title='Go to Login page' onPress={() => props.navigation.navigate("Login")} />
+      <Button title='Go to Login page' onPress={() => props.navigation.navigate("Login",{name:"Ramesh Banakar",age:24})} />
     </View>
   );
 };
 
-const LogIn = (props:any) => {
+const LogIn = (props: any) => {
   return (
     <View>
       <Text >Login screen</Text>
-      <Button title='Go to Login page' onPress={() => props.navigation.navigate("Home")} />
+      <Button title='Go to Home page' onPress={() => props.navigation.navigate("Home")} />
     </View>
   );
 };
 
 function App(): React.JSX.Element {
-  
+  const lefttClick = () => {
+    console.warn("left click")
+  }
   return (
-   
-      <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="Home" component={Home} />
-        <Stack.Screen name="Login" component={LogIn} />
-        </Stack.Navigator>
-      </NavigationContainer>
-    
+
+    <NavigationContainer>
+      <Stack.Navigator screenOptions={{
+        title: "Home page",
+        headerStyle: {
+          backgroundColor: "orange"
+        },
+        headerTitleStyle: {
+          fontSize: 10
+        }
+      }}>
+        <Stack.Screen name="Home" component={Home} options={{ headerTitle: () => <Button title='left' onPress={lefttClick} />, headerRight: () => <Button title='right' onPress={() => console.warn("right click")} /> }} />
+        <Stack.Screen name="Login" component={Loader} />
+      </Stack.Navigator>
+    </NavigationContainer>
+
   );
 }
 const style = StyleSheet.create({
